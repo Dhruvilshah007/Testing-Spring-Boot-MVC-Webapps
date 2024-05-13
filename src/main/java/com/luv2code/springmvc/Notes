@@ -1,0 +1,66 @@
+Model Structure
+
+
+Interface - Grade
+    id:int
+    studentid: int
+    grade: double
+Class - HistoryGrade
+Class - MathGrade
+Class - ScienceGrade
+
+
+Interface - Student
+    studentinformation: String
+    fullName: String
+Class CollegeStudent
+Class - GradeBookCollegeStudent
+    studentGrades: StudentGrades
+
+
+Class - GradeBook
+    students: List<GradeBookCollegeStudent>
+Class - StudentGrades
+    historyGradeResults: List<Grade>
+    mathGradeResults: List<Grade>
+    scienceGradeResults: List<Grade>
+
+
+
+
+What about DB connection??
+Our application.properties DB info is still commented out.
+In Spring Boot, if an embedded database is listed as a
+dependency then Spring Boot will
+auto-configure the database connection
+}
+Our project has H2 as a dependency,
+passed: 1 of so Spring Boot will auto-configure a connection
+Users\lu to the embedded H2 database
+45.68. .tLoaderDele
+
+
+-----
+
+
+Database Initialization and Cleanup
+When we are performing integration testing with a database
+• Each test should run from a known state
+Before each test, perform initialization
+Insert sample data
+After each test, perform cleanup
+Delete the sample data
+
+
+Testing Approach
+
+Each test should run from a known state
+
+
+@BeforeEach ->Insert sample Data
+@Test Method One
+@AfterEach  ->Delete sample Data
+
+@BeforeEach ->Insert sample Data
+@Test Method Two
+@AfterEach  ->Delete sample Data

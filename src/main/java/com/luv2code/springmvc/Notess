@@ -64,3 +64,44 @@ Each test should run from a known state
 @BeforeEach ->Insert sample Data
 @Test Method Two
 @AfterEach  ->Delete sample Data
+
+
+
+----------------------
+
+Testing Spring MVC Web Controllers
+Problem
+How can we test Spring MVC
+How can we create HTTP
+How can we verify HTTP
+status code
+view name
+model attributes
+
+
+
+Soln
+Mock object support for web, REST APIs etc...
+For testing controllers, you can use MockMvc
+Provides Spring MVC processing of request / response
+There is no need to run a server (embedded or external)
+
+
+Development Process
+1. Add annotation @AutoConfigureMockMvc
+2. Inject the MockMvc
+3. Perform web requests
+4. Define expectations
+5. Assert results
+
+
+To run server on 1500 localhost  or run MvcTestExampleApplication java file
+ mvn spring-boot:run
+
+studentCreateServiceMock
+
+###)To Do: Delete Student
+Apply TDD
+• Create a failing test
+Add code to GradeBookController to delete student... make the test pass
+Add code to GradeBookController to check for error page... make the test pass

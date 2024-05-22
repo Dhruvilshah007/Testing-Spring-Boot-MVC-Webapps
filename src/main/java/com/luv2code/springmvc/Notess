@@ -29,7 +29,7 @@ Class - StudentGrades
 
 
 What about DB connection??
-Our application.properties DB info is still commented out.
+Our tion.properties DB info is still commented out.
 In Spring Boot, if an embedded database is listed as a
 dependency then Spring Boot will
 auto-configure the database connection
